@@ -302,7 +302,7 @@ const drawExistingProp=drawStoryProp;drawStoryProp=function(ct,kind,x,y,w,h){if(
 
 storyObjects.calendar.kind='board';storyObjects.calendar.label='Pissarra de l’aula';
 </script><script>// Set this to the /exec URL of the separate Apps Script provided in teacher/.
-const SHEETS_PROGRESS_URL = 'https://script.google.com/macros/s/AKfycbwykS34ANXhUuXu1OTxxA_r9lZGAjAqR3DaLtE8KtscbfMvoLz4jWQZ7BeZh5fkFHsO/exec';
+const SHEETS_PROGRESS_URL = 'https://script.google.com/macros/s/AKfycbxpZrFgOPNxl9U2iUBdKFhL77lMpPuRouJE5E4qYUXAOlo3MLOviTF6lFhzm0XkJrtb/exec';
 let progressBusy=false,progressRetryAt=0,progressContext='',progressLastSignature='',progressLastHint=0;
 function progressPercent(g=game){if(!g)return 0;if(g.win)return 100;let f=g.flags,items=g.items,hasItem=id=>items.includes(id),score=(hasItem('cloth')?5:0)+(f.clean?10:0)+(hasItem('magnifier')?10:0)+(f.note?15:0)+(f.power?5:0)+(hasItem('battery')?5:0)+(f.lampSolved||hasItem('flashlight')?5:0)+(hasItem('flashlight')?10:0)+(f.sorted||hasItem('key')?10:0)+(hasItem('key')?10:0)+(f.memory?10:0);score+=['radio','magnet','projector','simplifybox'].filter(k=>f[k]).length*2+(f.usbRead?1:0);return Math.min(99,score)}
 function trackingKey(){return 'mathsacre-progress:'+player.toLocaleLowerCase()}
